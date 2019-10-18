@@ -1,75 +1,59 @@
 /*
- * Disciplina: 	ProgramaÃ§Ã£o Orientada a Objetos
- * Prof.:		Orlewilson B. Maia
- * Autor:		Seu nome
- * Data:		30/08/2019
- * AtualizaÃ§Ã£o:	27/09/2019
- * DescriÃ§Ã£o:	Exemplo Classe sem e com encapsulamento
- * 
- * */
+ * Programação Orientada a Objetos
+ * Professor:	Orlewilson Bentes Maia
+ * Data:		22/09/2019
+ * Atualização:	11/10/2019
+ * Autor:		seu nome
+ * Descrição:	Exemplificar objetos da classe Cachorro
+ */
 
 public class Main {
 
 	public static void main(String[] args) {
 
-		// criar objetos
+		// objetos da classe Cachorro
+		// usando construtor sem argumentos
 		Cachorro toto = new Cachorro();
 		
-		// alterando conteÃºdo dos atributos (sem encapsulamnto)
-//		toto.apelido = "toto";
-//		toto.comprimento = 1.2f;
-//		toto.cor = "amarelo";
-//		toto.peso = 20f;
-//		toto.raca = "pinch";
-		
-		// alterando conteÃºdo dos atributos (com encapsulamento)
-		toto.setApelido("toto");
-		toto.setComprimento(1.2f);
-		toto.setCor("amarelo");
-		toto.setPeso(20f);
-		toto.setRaca("pinch");
-			
-		
-//		// mostrar conteÃºdos dos atributos (sem encapsulamnto)
-//		System.out.println("Apelido: " + 
-//		toto.apelido);
-//		
-//		System.out.println("Comprimento: " + 
-//				toto.comprimento);
-//		
-//		System.out.println("Cor: " + 
-//				toto.cor);
-//		
-//		System.out.println("Peso: " + 
-//				toto.peso);
-//		
-//		System.out.println("RaÃ§a: " + 
-//				toto.raca);
+		// usando construtor com argumentos
+		Cachorro golias = new Cachorro("Golias", "chowchow", "caramelo", 1.5f, 55f);
 
-		// mostrar conteÃºdos dos atributos (com encapsulamnto)
-//		System.out.println("Apelido: " + 
-//		toto.getApelido());
-//		
-//		System.out.println("Comprimento: " + 
-//				toto.getComprimento());
-//		
-//		System.out.println("Cor: " + 
-//				toto.getCor());
-//		
-//		System.out.println("Peso: " + 
-//				toto.getPeso());
-//		
-//		System.out.println("RaÃ§a: " + 
-//				toto.getRaca());
-		
-		// mostrar dados do cachorro
+		// acessando atributos (sem encapsulamento)
+//		toto.apelido = "Totó";
+//		toto.comprimento = 1.32f;
+//		toto.cor = "marrom";
+//		toto.peso = 0.8f;
+//		toto.raca = "viralata";
+
+		// acessando atributos (com encapsulamento)
+		toto.setApelido("Totó");
+		toto.setComprimento(1.32f);
+		toto.setCor("marrom");
+		toto.setPeso(0.8f);
+		toto.setRaca("viralata");
+
+		// imprimir o conteúdo de cada atributo (sem encapsulamento)
+//		System.out.println("Apelido: " + toto.apelido);
+//		System.out.println("Raça: " + toto.raca);
+//		System.out.println("Cor: " + toto.cor);
+//		System.out.println("Comprimento: " + toto.comprimento);
+//		System.out.println("Peso: " + toto.peso);
+
+		// imprimir o conteúdo de cada atributo (com encapsulamento)
+//		System.out.println("Apelido: " + toto.getApelido());
+//		System.out.println("Raça: " + toto.getRaca());
+//		System.out.println("Cor: " + toto.getCor());
+//		System.out.println("Comprimento: " + toto.getComprimento());
+//		System.out.println("Peso: " + toto.getPeso());
+
+		// imprimir o conteúdo de cada atributo
 		toto.mostrarInformacoes();
 
-		// chamando os mÃ©todos
+		// chamar os métodos
 		toto.correr();
-		
-		toto.morder();
-		
 		toto.latir();
+		toto.morder();
+
+		golias.mostrarInformacoes();
 	}
 }

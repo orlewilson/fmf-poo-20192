@@ -1,94 +1,116 @@
 /*
- * Disciplina: 	ProgramaÃ§Ã£o Orientada a Objetos
- * Prof.:		Orlewilson B. Maia
- * Autor:		Seu nome
- * Data:		30/08/2019
- * AtualizaÃ§Ã£o:	27/09/2019
- * DescriÃ§Ã£o:	Classe para representar um
- * 				cachorro sem encapsulamento e com encapsulamento
- * 
- * */
+ * Programação Orientada a Objetos
+ * Professor:	Orlewilson Bentes Maia
+ * Data:		22/09/2019
+ * Atualização:	11/10/2019
+ * Autor:		seu nome
+ * Descrição:	Classe para representar um cachorro
+ */
 
 public class Cachorro {
 
 	// atributos (sem encapsulamento)
+//	String apelido;
 //	String raca;
-//	String cor;
 //	float comprimento;
 //	float peso;
-//	String apelido;
-	
+//	String cor;
+
 	// atributos (com encapsulamento)
+	private String apelido;
 	private String raca;
-	private String cor;
 	private float comprimento;
 	private float peso;
-	private String apelido;
+	private String cor;
 
-	// mÃ©todos
-	// alterar conteÃºdo do atributo raca
-	public void setRaca(String raca) {
-		this.raca = raca;
+	// métodos
+	// construtor sem argumento
+	public Cachorro() {
+		this.apelido = "";
+		this.raca = "";
+		this.cor = "";
+		this.comprimento = 0f;
+		this.peso = 0f;
 	}
 
-	// obter conteÃºdo do atributo raca
-	public String getRaca() {
-		return this.raca;
+	// construtor com argumentos
+	public Cachorro(String apelido, String raca, String cor, float comprimento, float peso) {
+//			this.apelido = apelido;
+//			this.raca = raca;
+//			this.cor = cor;
+//			this.comprimento = comprimento;
+//			this.peso = peso;
+		setApelido(apelido);
+		setComprimento(comprimento);
+		setCor(cor);
+		setPeso(peso);
+		setRaca(raca);
 	}
 
-	// alterar conteÃºdo do atributo cor
-	public void setCor(String cor) {
-		this.cor = cor;
-	}
-
-	// obter conteÃºdo do atributo cor
-	public String getCor() {
-		return this.cor;
-	}
-
-	// alterar conteÃºdo do atributo apelido
+	// alterar o conteúdo do atributo apelido
 	public void setApelido(String apelido) {
 		this.apelido = apelido;
 	}
 
-	// obter conteÃºdo do atributo apelido
+	// obter o conteúdo do atributo apelido
 	public String getApelido() {
 		return this.apelido;
 	}
 
-	// alterar conteÃºdo do atributo comprimento
+	// alterar o conteúdo do atributo raca
+	public void setRaca(String raca) {
+		this.raca = raca;
+	}
+
+	// obter o conteúdo do atributo raca
+	public String getRaca() {
+		return this.raca;
+	}
+
+	// alterar o conteúdo do atributo cor
+	public void setCor(String cor) {
+		this.cor = cor;
+	}
+
+	// obter o conteúdo do atributo cor
+	public String getCor() {
+		return this.cor;
+	}
+
+	// alterar o conteúdo do atributo comprimento
 	public void setComprimento(float comprimento) {
 
-		// verifiicar se comprimento Ã© > 0
+		// verificar se o valor é positivo
 		if (comprimento > 0) {
 			this.comprimento = comprimento;
 		} else {
-			System.out.println("informe um valor positivo");
+			System.out.println("informe um valor de comprimento " + "positivo!");
 		}
 	}
 
-	// obter conteÃºdo do atributo comprimento
+	// obter o conteúdo do atributo comprimento
 	public float getComprimento() {
 		return this.comprimento;
 	}
 
-	// alterar conteÃºdo do atributo peso
+	// alterar o conteúdo do atributo peso
 	public void setPeso(float peso) {
 
+		// verificar se o valor é positivo
 		if (peso > 0) {
 			this.peso = peso;
 		} else {
-			System.out.println("informe um valor positivo");
+			System.out.println("Informe um valor de peso" + "positivo!");
 		}
 	}
 
-	// obter conteÃºdo do atributo peso
+	// obter o conteúdo do atributo peso
 	public float getPeso() {
 		return this.peso;
 	}
 
 	void latir() {
-		System.out.println("Au, au!!!!");
+		System.out.println("latindo...");
 	}
 
 	void correr() {
@@ -99,12 +121,12 @@ public class Cachorro {
 		System.out.println("mordendo...");
 	}
 
-	// mostrar informaÃ§Ãµes dos atributos
+	// imprimir os valores de cada atributo
 	public void mostrarInformacoes() {
 		System.out.println("Apelido: " + getApelido());
-		System.out.println("RaÃ§a: " + getRaca());
 		System.out.println("Cor: " + getCor());
-		System.out.println("Peso: " + getPeso());
+		System.out.println("Raça: " + getRaca());
 		System.out.println("Comprimento: " + getComprimento());
+		System.out.println("Peso: " + getPeso());
 	}
 }
